@@ -1,0 +1,6 @@
+create database weanswer;
+use weanswer;
+create table login(username varchar(20) PRIMARY KEY NOT NULL, password varchar(30), emailid varchar(40), name varchar(30));
+create table Questions(Questions varchar(1000) PRIMARY KEY NOT NULL, Keyword_1 varchar(30), Keyword_2 varchar(30), Keyword_3 varchar(30), Category varchar(30));
+create table Answers(Questions varchar(1000) REFERENCES Questions.Questions, Answer1 varchar(1000), Answer2 varchar(1000), Answer3 varchar(1000), Answer4 varchar(1000), answer5 varchar(1000));
+create table Feedback(name varchar(30), emailid varchar(40), Feedback varchar(1000));
